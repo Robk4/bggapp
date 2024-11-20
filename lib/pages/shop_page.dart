@@ -31,25 +31,31 @@ class _ShopPageState extends State<ShopPage> {
       builder: (context, value, child) => Column(
         children: [
           //search bar
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Colors.grey.shade400,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            margin: const EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Search",
-                  style: TextStyle(color: Colors.grey.shade800),
-                ),
-                Icon(
-                  Icons.search,
-                  color: Colors.grey.shade800,
-                ),
-              ],
+
+          Card(
+            margin: EdgeInsets.all(12),
+            elevation: 9,
+            shadowColor: const Color.fromARGB(255, 165, 165, 216),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+            color: const Color(0xffffffff),
+            child: TextField(
+              cursorColor: const Color(0xff757575),
+              decoration: InputDecoration(
+                  contentPadding:
+                      const EdgeInsets.only(left: 20, top: 15, bottom: 15),
+                  hintStyle: const TextStyle(
+                    color: Color.fromARGB(168, 117, 117, 117),
+                    fontSize: 17,
+                  ),
+                  hintText: "Search",
+                  suffixIcon: IconButton(
+                    icon: const Icon(Icons.search),
+                    onPressed: () {},
+                  ),
+                  border: const OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  )),
             ),
           ),
 
